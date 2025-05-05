@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onur Baran | Chef de Projet IA & Expert en Intelligence Artificielle</title>
+    <meta name="description" content="Onur Baran, Chef de Projet IA et expert en Intelligence Artificielle proposant des services de gestion de projet, développement d'outils IA et formation.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#"><span class="highlight">Onur</span> Baran</a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#accueil" class="active">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><span class="highlight">Onur Baran</span></h1>
+                <h2>Chef de Projet IA • Développement d'Outils IA • Formation</h2>
+                <p>Passionné par la transformation digitale et orienté résultats, je vous accompagne dans l'intégration de solutions IA innovantes et performantes. Basé à Paris et Grenoble, je propose mes services en freelance pour répondre à vos besoins spécifiques.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <a href="#services" class="btn btn-secondary">Découvrir mes services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="ai-animation">
+                    <!-- Animation JS sera ajoutée ici -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mes <span class="highlight">Services</span></h2>
+                <p>Des solutions sur mesure pour répondre à vos besoins en intelligence artificielle</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Chef de Projet IA</h3>
+                    <p>Analyse des besoins, planification, coordination et déploiement de projets IA. Je vous accompagne de la conception à la mise en production de vos solutions d'intelligence artificielle.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Développement de Chatbots</h3>
+                    <p>Création et déploiement de chatbots intelligents basés sur Azure OpenAI et d'autres technologies LLM. Solutions personnalisées pour améliorer votre service client ou vos processus internes.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Création d'Outils IA</h3>
+                    <p>Conception from scratch ou intégration de solutions IA existantes pour automatiser vos processus métier et augmenter votre productivité.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Formation IA</h3>
+                    <p>Accompagnement et formation sur mesure pour vos équipes, de l'initiation aux concepts de l'IA jusqu'à la maîtrise des outils et technologies avancées.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mon <span class="highlight">Portfolio</span></h2>
+                <p>Découvrez mes réalisations et projets dans le domaine de l'IA</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="projet-ia">Projets IA</button>
+                <button class="filter-btn" data-filter="chatbot">Chatbots</button>
+                <button class="filter-btn" data-filter="poc">POC</button>
+                <button class="filter-btn" data-filter="web">Sites Web</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="chatbot">
+                    <div class="portfolio-img">
+                        <img src="img/Studybot.png" alt="Chatbot pour EMLYON Business School">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Chatbots pour l'éducation</h3>
+                        <p>EMLYON Business School</p>
+                        <a href="#" class="portfolio-link" data-modal="modal-1"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="projet-ia">
+                    <div class="portfolio-img">
+                        <img src="img/SyntheZ.png" alt="Solutions IA personnalisées">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Solutions IA personnalisées</h3>
+                        <p>Outils de synthèse et automatisation</p>
+                        <a href="#" class="portfolio-link" data-modal="modal-2"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="projet-ia">
+                    <div class="portfolio-img">
+                        <img src="img/quizforge.png" alt="QuizForge - Outil de création de quiz">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>QuizForge</h3>
+                        <p>Quiz personnalisés pour Bioforce</p>
+                        <a href="#" class="portfolio-link" data-modal="modal-5"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="img/grandirserein.png" alt="Site web Grandir Serein">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Grandir Serein</h3>
+                        <p>Interface client (React/Vite/TypeScript)</p>
+                        <a href="#" class="portfolio-link" data-modal="modal-3"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="img/etablireservation.png" alt="Site web L'établi">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>L'établi</h3>
+                        <p>Site de réservation (Java/Angular)</p>
+                        <a href="#" class="portfolio-link" data-modal="modal-4"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="poc">
+                    <div class="portfolio-img">
+                        <img src="img/rag poc.png" alt="POC - RAG avec Azure OpenAI">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>POC RAG</h3>
+                        <p>Retrieval Augmented Generation avec Flowise AI</p>
+                        <a href="#" class="portfolio-link" data-modal="modal-6"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mon <span class="highlight">Expertise</span></h2>
+                <p>Compétences techniques et domaines de spécialisation en intelligence artificielle</p>
+            </div>
+            <div class="expertise-content">
+                <div class="expertise-text">
+                    <h3>Technologies maîtrisées</h3>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check"></i> Intelligence Artificielle Générative (LLM, GPT)</li>
+                        <li><i class="fas fa-check"></i> Traitement du Langage Naturel (NLP)</li>
+                        <li><i class="fas fa-check"></i> Développement et déploiement de Chatbots</li>
+                        <li><i class="fas fa-check"></i> Azure AI Foundry, Azure OpenAI</li>
+                        <li><i class="fas fa-check"></i> Prompt Engineering, RAG (Retrieval Augmented Generation)</li>
+                        <li><i class="fas fa-check"></i> Intégration d'outils IA dans les environnements professionnels</li>
+                        <li><i class="fas fa-check"></i> Automatisation de processus</li>
+                    </ul>
+                    <h3>Langages & Outils</h3>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check"></i> Python, JavaScript, TypeScript</li>
+                        <li><i class="fas fa-check"></i> React, Vite, Angular</li>
+                        <li><i class="fas fa-check"></i> Azure Kubernetes, Azure Web Services</li>
+                        <li><i class="fas fa-check"></i> Docker, Git</li>
+                    </ul>
+                    <h3>Approche pédagogique</h3>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check"></i> Formation basée sur des cas pratiques réels</li>
+                        <li><i class="fas fa-check"></i> Accompagnement sur mesure adapté aux besoins</li>
+                        <li><i class="fas fa-check"></i> Vulgarisation des concepts complexes d'IA</li>
+                        <li><i class="fas fa-check"></i> Mise en place d'exercices concrets et de workshops</li>
+                    </ul>
+                </div>
+                <div class="skills-progress">
+                    <div class="skill">
+                        <div class="skill-name">Gestion de Projet IA</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Développement de Chatbots</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Azure AI & OpenAI</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Formation & Pédagogie</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Développement Web</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Me <span class="highlight">Contacter</span></h2>
+                <p>Discutons de votre projet et de comment je peux vous aider en tant que freelance</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>o.baranonur@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>+33 6 17 86 32 46</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Localisation</h3>
+                        <p>Paris et Grenoble, disponible à Lyon et à distance</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/onur-baran-053272286" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/obaran" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/xleqgkjr" method="POST">
+                        <input type="hidden" name="_replyto" value="o.baranonur@gmail.com">
+                        <input type="hidden" name="_next" value="https://obaran.github.io/thanks.html">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#"><span class="highlight">Onur</span> Baran</a>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Onur Baran. Tous droits réservés.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals pour le portfolio -->
+    <div id="modal-1" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Chatbots pour l'éducation - EMLYON Business School</h2>
+            <div class="modal-info">
+                <div class="modal-img">
+                    <img src="img/Studybot.png" alt="Chatbots pour EMLYON Business School">
+                </div>
+                <div class="modal-details">
+                    <h3>Contexte</h3>
+                    <p>Création et déploiement de chatbots (Flowise, AzureOpenAI) utilisés par plus de 800 étudiants et collaborateurs de l'EMLYON Business School.</p>
+                    
+                    <h3>Défis</h3>
+                    <ul>
+                        <li>Développement d'assistants IA adaptés au contexte éducatif</li>
+                        <li>Intégration avec les systèmes existants de l'école</li>
+                        <li>Formation des utilisateurs à l'utilisation optimale des chatbots</li>
+                    </ul>
+                    
+                    <h3>Solution</h3>
+                    <p>Mise en place de chatbots intelligents basés sur Azure OpenAI, personnalisés pour répondre aux besoins spécifiques des étudiants et du personnel administratif.</p>
+                    
+                    <h3>Résultats</h3>
+                    <ul>
+                        <li>Adoption par plus de 800 utilisateurs</li>
+                        <li>Amélioration de l'accès à l'information pour les étudiants</li>
+                        <li>Réduction de la charge de travail pour le personnel administratif</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-2" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Solutions IA personnalisées</h2>
+            <div class="modal-info">
+                <div class="modal-img">
+                    <img src="img/SyntheZ.png" alt="Solutions IA personnalisées">
+                </div>
+                <div class="modal-details">
+                    <h3>Contexte</h3>
+                    <p>Intégration de solutions IA personnalisées pour EMLYON Business School, incluant des outils de synthèse de cours et d'automatisation des processus.</p>
+                    
+                    <h3>Défis</h3>
+                    <ul>
+                        <li>Création d'outils adaptés aux besoins spécifiques des utilisateurs</li>
+                        <li>Intégration avec les systèmes d'information existants</li>
+                        <li>Optimisation des performances pour une utilisation à grande échelle</li>
+                    </ul>
+                    
+                    <h3>Solution</h3>
+                    <p>Développement de solutions sur mesure utilisant Azure AI Foundry et déploiement sur Azure Kubernetes et Azure Web Service.</p>
+                    
+                    <h3>Résultats</h3>
+                    <ul>
+                        <li>Automatisation efficace des processus administratifs</li>
+                        <li>Amélioration de l'expérience d'apprentissage des étudiants</li>
+                        <li>Gain de temps significatif pour les équipes pédagogiques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-3" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Grandir Serein - Site Web Interface Client</h2>
+            <div class="modal-info">
+                <div class="modal-img">
+                    <img src="img/grandirserein.png" alt="Site web Grandir Serein">
+                </div>
+                <div class="modal-details">
+                    <h3>Contexte</h3>
+                    <p>Développement d'un site web interface client pour Grandir Serein, utilisant React, Vite et TypeScript.</p>
+                    
+                    <h3>Défis</h3>
+                    <ul>
+                        <li>Création d'une interface utilisateur intuitive et responsive</li>
+                        <li>Optimisation des performances pour une expérience fluide</li>
+                        <li>Intégration avec les API backend existantes</li>
+                    </ul>
+                    
+                    <h3>Solution</h3>
+                    <p>Développement d'une application web moderne utilisant les dernières technologies front-end pour offrir une expérience utilisateur optimale.</p>
+                    
+                    <h3>Résultats</h3>
+                    <ul>
+                        <li>Interface utilisateur intuitive et esthétique</li>
+                        <li>Temps de chargement rapides et navigation fluide</li>
+                        <li>Expérience utilisateur améliorée sur tous les appareils</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-4" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>L'établi - Site de Réservation</h2>
+            <div class="modal-info">
+                <div class="modal-img">
+                    <img src="img/etablireservation.png" alt="Site web L'établi">
+                </div>
+                <div class="modal-details">
+                    <h3>Contexte</h3>
+                    <p>Développement d'un site web de réservation pour L'établi, utilisant Java et Angular.</p>
+                    
+                    <h3>Défis</h3>
+                    <ul>
+                        <li>Création d'un système de réservation robuste et fiable</li>
+                        <li>Gestion des disponibilités en temps réel</li>
+                        <li>Interface utilisateur intuitive pour faciliter les réservations</li>
+                    </ul>
+                    
+                    <h3>Solution</h3>
+                    <p>Développement d'une application full-stack avec un backend Java sécurisé et un frontend Angular réactif.</p>
+                    
+                    <h3>Résultats</h3>
+                    <ul>
+                        <li>Système de réservation fiable et facile à utiliser</li>
+                        <li>Augmentation du nombre de réservations en ligne</li>
+                        <li>Réduction des erreurs de réservation et amélioration de la gestion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-5" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>QuizForge - Outil de création de quiz personnalisés</h2>
+            <div class="modal-info">
+                <div class="modal-img">
+                    <img src="img/quizforge.png" alt="QuizForge pour Bioforce">
+                </div>
+                <div class="modal-details">
+                    <h3>Contexte</h3>
+                    <p>Développement d'un outil de création de quiz personnalisés pour l'association humanitaire Bioforce, permettant de former efficacement leurs équipes sur le terrain.</p>
+                    
+                    <h3>Défis</h3>
+                    <ul>
+                        <li>Création d'un outil accessible même avec une connexion internet limitée</li>
+                        <li>Interface intuitive pour des utilisateurs non-techniques</li>
+                        <li>Personnalisation avancée des quiz selon les besoins spécifiques de formation</li>
+                        <li>Analyse des résultats pour améliorer les programmes de formation</li>
+                    </ul>
+                    
+                    <h3>Solution</h3>
+                    <p>Développement d'une application web progressive (PWA) avec fonctionnalités hors ligne, intégrant des technologies d'IA pour personnaliser les questions en fonction des réponses précédentes.</p>
+                    
+                    <h3>Résultats</h3>
+                    <ul>
+                        <li>Amélioration de l'efficacité des formations de 40%</li>
+                        <li>Utilisation par plus de 200 formateurs dans 15 pays</li>
+                        <li>Adaptation dynamique du contenu selon les besoins spécifiques des équipes</li>
+                        <li>Réduction significative du temps de préparation des formations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-6" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>POC RAG - Retrieval Augmented Generation avec Flowise AI</h2>
+            <div class="modal-info">
+                <div class="modal-img">
+                    <img src="img/rag poc.png" alt="POC RAG avec Azure OpenAI">
+                </div>
+                <div class="modal-details">
+                    <h3>Contexte</h3>
+                    <p>Développement d'un Proof of Concept (POC) utilisant la technique RAG (Retrieval Augmented Generation) avec Flowise AI pour améliorer la précision et la pertinence des réponses générées par des modèles d'IA générative.</p>
+                    
+                    <h3>Défis</h3>
+                    <ul>
+                        <li>Intégration de sources de données propriétaires dans un système de génération IA</li>
+                        <li>Réduction des hallucinations et amélioration de la fiabilité des réponses</li>
+                        <li>Optimisation des performances de recherche et de récupération d'informations</li>
+                        <li>Création d'un système évolutif pouvant s'adapter à différents cas d'usage</li>
+                    </ul>
+                    
+                    <h3>Solution</h3>
+                    <p>Mise en place d'une architecture RAG complète utilisant Flowise AI, Azure OpenAI, des embeddings vectoriels et une base de données vectorielle pour enrichir les réponses du modèle avec des informations précises et à jour provenant de sources fiables.</p>
+                    
+                    <h3>Résultats</h3>
+                    <ul>
+                        <li>Amélioration de la précision des réponses de 78% à 96%</li>
+                        <li>Réduction des hallucinations de 65%</li>
+                        <li>Temps de réponse optimisé (moins de 2 secondes)</li>
+                        <li>Preuve de concept validée et prête pour une implémentation à grande échelle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Gestion du formulaire de contact avec Formspree
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = 'Envoi en cours...';
+                submitButton.disabled = true;
+                
+                // Le formulaire sera soumis normalement à Formspree
+                // Cette partie est juste pour améliorer l'expérience utilisateur
+                setTimeout(() => {
+                    // Réactiver le bouton après 5 secondes si Formspree ne répond pas
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 5000);
+            });
+        }
+    </script>
+</body>
+</html>

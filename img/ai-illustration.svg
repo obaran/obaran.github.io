@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4e54c8;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8f94fb;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#4e54c8;stop-opacity:0.8" />
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background Circle -->
+        <circle cx="400" cy="400" r="300" fill="url(#gradient1)" opacity="0.1"></circle>
+        
+        <!-- Network Nodes -->
+        <circle cx="400" cy="250" r="30" fill="url(#gradient1)"></circle>
+        <circle cx="300" cy="350" r="25" fill="url(#gradient1)"></circle>
+        <circle cx="500" cy="350" r="25" fill="url(#gradient1)"></circle>
+        <circle cx="250" cy="450" r="20" fill="url(#gradient1)"></circle>
+        <circle cx="400" cy="450" r="20" fill="url(#gradient1)"></circle>
+        <circle cx="550" cy="450" r="20" fill="url(#gradient1)"></circle>
+        <circle cx="350" cy="550" r="15" fill="url(#gradient1)"></circle>
+        <circle cx="450" cy="550" r="15" fill="url(#gradient1)"></circle>
+        
+        <!-- Connection Lines -->
+        <line x1="400" y1="250" x2="300" y2="350" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="400" y1="250" x2="500" y2="350" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="300" y1="350" x2="250" y2="450" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="300" y1="350" x2="400" y2="450" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="500" y1="350" x2="400" y2="450" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="500" y1="350" x2="550" y2="450" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="250" y1="450" x2="350" y2="550" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="400" y1="450" x2="350" y2="550" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="400" y1="450" x2="450" y2="550" stroke="url(#gradient2)" stroke-width="3"></line>
+        <line x1="550" y1="450" x2="450" y2="550" stroke="url(#gradient2)" stroke-width="3"></line>
+        
+        <!-- Pulse Circles (for animation) -->
+        <circle cx="400" cy="250" r="35" fill="url(#gradient1)" opacity="0.3">
+            <animate attributeName="r" values="35;45;35" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="300" cy="350" r="30" fill="url(#gradient1)" opacity="0.3">
+            <animate attributeName="r" values="30;40;30" dur="3s" repeatCount="indefinite" begin="0.5s" />
+            <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" begin="0.5s" />
+        </circle>
+        <circle cx="500" cy="350" r="30" fill="url(#gradient1)" opacity="0.3">
+            <animate attributeName="r" values="30;40;30" dur="3s" repeatCount="indefinite" begin="1s" />
+            <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" begin="1s" />
+        </circle>
+        
+        <!-- Data Flow Animation -->
+        <circle cx="400" cy="250" r="5" fill="#ffffff">
+            <animate attributeName="cx" values="400;300" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="250;350" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="400" cy="250" r="5" fill="#ffffff">
+            <animate attributeName="cx" values="400;500" dur="2s" repeatCount="indefinite" begin="0.3s" />
+            <animate attributeName="cy" values="250;350" dur="2s" repeatCount="indefinite" begin="0.3s" />
+            <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" begin="0.3s" />
+        </circle>
+        <circle cx="300" cy="350" r="4" fill="#ffffff">
+            <animate attributeName="cx" values="300;250" dur="2s" repeatCount="indefinite" begin="0.6s" />
+            <animate attributeName="cy" values="350;450" dur="2s" repeatCount="indefinite" begin="0.6s" />
+            <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" begin="0.6s" />
+        </circle>
+        <circle cx="500" cy="350" r="4" fill="#ffffff">
+            <animate attributeName="cx" values="500;550" dur="2s" repeatCount="indefinite" begin="0.9s" />
+            <animate attributeName="cy" values="350;450" dur="2s" repeatCount="indefinite" begin="0.9s" />
+            <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" begin="0.9s" />
+        </circle>
+    </g>
+</svg>
