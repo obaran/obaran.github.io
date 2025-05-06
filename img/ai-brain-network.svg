@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#4285f4;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4285f4;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#1a73e8;stop-opacity:0.8" />
+        </linearGradient>
+        
+        <!-- Filters -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        
+        <!-- Patterns -->
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="none" />
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#4285f4" stroke-width="0.5" stroke-opacity="0.2" />
+        </pattern>
+        
+        <!-- Masks -->
+        <mask id="circleMask">
+            <circle cx="400" cy="300" r="250" fill="white" />
+        </mask>
+        
+        <!-- Clips -->
+        <clipPath id="circleClip">
+            <circle cx="400" cy="300" r="250" />
+        </clipPath>
+    </defs>
+    
+    <!-- Background Elements -->
+    <rect width="800" height="600" fill="url(#pattern)" />
+    <rect width="800" height="600" fill="url(#grid)" opacity="0.7" />
+    
+    <!-- Main Brain Structure -->
+    <g clip-path="url(#circleClip)">
+        <!-- Brain Outline -->
+        <path d="M400,150 C500,150 550,200 550,300 C550,400 500,450 400,450 C300,450 250,400 250,300 C250,200 300,150 400,150 Z" 
+              fill="none" stroke="url(#blueGradient)" stroke-width="2" opacity="0.7">
+            <animate attributeName="d" 
+                     values="M400,150 C500,150 550,200 550,300 C550,400 500,450 400,450 C300,450 250,400 250,300 C250,200 300,150 400,150 Z;
+                             M400,160 C510,160 560,210 560,300 C560,390 510,440 400,440 C290,440 240,390 240,300 C240,210 290,160 400,160 Z;
+                             M400,150 C500,150 550,200 550,300 C550,400 500,450 400,450 C300,450 250,400 250,300 C250,200 300,150 400,150 Z" 
+                     dur="10s" repeatCount="indefinite" />
+        </path>
+        
+        <!-- Brain Hemispheres -->
+        <path d="M400,150 C450,150 500,200 500,300 C500,400 450,450 400,450 L400,150 Z" 
+              fill="url(#blueGradient)" opacity="0.1">
+            <animate attributeName="opacity" values="0.1;0.2;0.1" dur="5s" repeatCount="indefinite" />
+        </path>
+        <path d="M400,150 C350,150 300,200 300,300 C300,400 350,450 400,450 L400,150 Z" 
+              fill="url(#blueGradient)" opacity="0.1">
+            <animate attributeName="opacity" values="0.1;0.2;0.1" dur="5s" repeatCount="indefinite" begin="2.5s" />
+        </path>
+    </g>
+    
+    <!-- Neural Network Nodes -->
+    <g id="nodes">
+        <!-- Central Node -->
+        <circle cx="400" cy="300" r="15" fill="url(#blueGradient)" filter="url(#glow)">
+            <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- Primary Nodes -->
+        <circle cx="320" cy="220" r="10" fill="url(#blueGradient)" filter="url(#glow)">
+            <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" begin="0.5s" />
+        </circle>
+        <circle cx="480" cy="220" r="10" fill="url(#blueGradient)" filter="url(#glow)">
+            <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" begin="1s" />
+        </circle>
+        <circle cx="320" cy="380" r="10" fill="url(#blueGradient)" filter="url(#glow)">
+            <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" begin="1.5s" />
+        </circle>
+        <circle cx="480" cy="380" r="10" fill="url(#blueGradient)" filter="url(#glow)">
+            <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" begin="2s" />
+        </circle>
+        
+        <!-- Secondary Nodes -->
+        <circle cx="260" cy="170" r="7" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="540" cy="170" r="7" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="260" cy="430" r="7" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="540" cy="430" r="7" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="200" cy="300" r="7" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="600" cy="300" r="7" fill="url(#blueGradient)" filter="url(#glow)" />
+        
+        <!-- Tertiary Nodes -->
+        <circle cx="350" cy="150" r="5" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="450" cy="150" r="5" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="350" cy="450" r="5" fill="url(#blueGradient)" filter="url(#glow)" />
+        <circle cx="450" cy="450" r="5" fill="url(#blueGradient)" filter="url(#glow)" />
+    </g>
+    
+    <!-- Neural Network Connections -->
+    <g id="connections">
+        <!-- Primary Connections -->
+        <line x1="400" y1="300" x2="320" y2="220" stroke="url(#glowGradient)" stroke-width="2" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line x1="400" y1="300" x2="480" y2="220" stroke="url(#glowGradient)" stroke-width="2" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="0.5s" />
+        </line>
+        <line x1="400" y1="300" x2="320" y2="380" stroke="url(#glowGradient)" stroke-width="2" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="1s" />
+        </line>
+        <line x1="400" y1="300" x2="480" y2="380" stroke="url(#glowGradient)" stroke-width="2" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="1.5s" />
+        </line>
+        
+        <!-- Secondary Connections -->
+        <line x1="320" y1="220" x2="260" y2="170" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        <line x1="480" y1="220" x2="540" y2="170" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        <line x1="320" y1="380" x2="260" y2="430" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        <line x1="480" y1="380" x2="540" y2="430" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        <line x1="320" y1="220" x2="200" y2="300" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        <line x1="480" y1="220" x2="600" y2="300" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        <line x1="320" y1="380" x2="200" y2="300" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        <line x1="480" y1="380" x2="600" y2="300" stroke="url(#glowGradient)" stroke-width="1.5" opacity="0.6" />
+        
+        <!-- Tertiary Connections -->
+        <line x1="320" y1="220" x2="350" y2="150" stroke="url(#glowGradient)" stroke-width="1" opacity="0.5" />
+        <line x1="480" y1="220" x2="450" y2="150" stroke="url(#glowGradient)" stroke-width="1" opacity="0.5" />
+        <line x1="320" y1="380" x2="350" y2="450" stroke="url(#glowGradient)" stroke-width="1" opacity="0.5" />
+        <line x1="480" y1="380" x2="450" y2="450" stroke="url(#glowGradient)" stroke-width="1" opacity="0.5" />
+    </g>
+    
+    <!-- Data Flow Animation -->
+    <g id="dataFlow">
+        <circle cx="400" cy="300" r="4" fill="#ffffff">
+            <animate attributeName="cx" values="400;320" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="300;220" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" />
+        </circle>
+        
+        <circle cx="400" cy="300" r="4" fill="#ffffff">
+            <animate attributeName="cx" values="400;480" dur="2.2s" repeatCount="indefinite" begin="0.3s" />
+            <animate attributeName="cy" values="300;220" dur="2.2s" repeatCount="indefinite" begin="0.3s" />
+            <animate attributeName="opacity" values="1;0" dur="2.2s" repeatCount="indefinite" begin="0.3s" />
+        </circle>
+        
+        <circle cx="400" cy="300" r="4" fill="#ffffff">
+            <animate attributeName="cx" values="400;320" dur="2.4s" repeatCount="indefinite" begin="0.6s" />
+            <animate attributeName="cy" values="300;380" dur="2.4s" repeatCount="indefinite" begin="0.6s" />
+            <animate attributeName="opacity" values="1;0" dur="2.4s" repeatCount="indefinite" begin="0.6s" />
+        </circle>
+        
+        <circle cx="400" cy="300" r="4" fill="#ffffff">
+            <animate attributeName="cx" values="400;480" dur="2.6s" repeatCount="indefinite" begin="0.9s" />
+            <animate attributeName="cy" values="300;380" dur="2.6s" repeatCount="indefinite" begin="0.9s" />
+            <animate attributeName="opacity" values="1;0" dur="2.6s" repeatCount="indefinite" begin="0.9s" />
+        </circle>
+        
+        <circle cx="320" cy="220" r="3" fill="#ffffff">
+            <animate attributeName="cx" values="320;260" dur="2s" repeatCount="indefinite" begin="1.2s" />
+            <animate attributeName="cy" values="220;170" dur="2s" repeatCount="indefinite" begin="1.2s" />
+            <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" begin="1.2s" />
+        </circle>
+        
+        <circle cx="480" cy="220" r="3" fill="#ffffff">
+            <animate attributeName="cx" values="480;540" dur="2.1s" repeatCount="indefinite" begin="1.5s" />
+            <animate attributeName="cy" values="220;170" dur="2.1s" repeatCount="indefinite" begin="1.5s" />
+            <animate attributeName="opacity" values="1;0" dur="2.1s" repeatCount="indefinite" begin="1.5s" />
+        </circle>
+    </g>
+    
+    <!-- Digital Elements -->
+    <g id="digitalElements" font-family="monospace" font-size="10" fill="#4285f4">
+        <text x="385" y="295">01</text>
+        <text x="305" y="215">10</text>
+        <text x="465" y="215">01</text>
+        <text x="305" y="375">10</text>
+        <text x="465" y="375">01</text>
+        
+        <!-- Binary Streams -->
+        <text x="350" y="250" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite" />
+            01001010
+        </text>
+        <text x="420" y="350" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite" begin="1s" />
+            10110101
+        </text>
+        <text x="280" y="320" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite" begin="2s" />
+            01101001
+        </text>
+        <text x="480" y="320" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite" begin="3s" />
+            10010110
+        </text>
+    </g>
+    
+    <!-- Pulse Effects -->
+    <circle cx="400" cy="300" r="250" fill="none" stroke="url(#blueGradient)" stroke-width="1" opacity="0.3">
+        <animate attributeName="r" values="250;270;250" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.1;0.3" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="300" r="200" fill="none" stroke="url(#blueGradient)" stroke-width="1" opacity="0.3">
+        <animate attributeName="r" values="200;220;200" dur="5s" repeatCount="indefinite" begin="1.5s" />
+        <animate attributeName="opacity" values="0.3;0.1;0.3" dur="5s" repeatCount="indefinite" begin="1.5s" />
+    </circle>
+    
+    <!-- Floating Tech Terms -->
+    <g font-family="Arial, sans-serif" font-size="12" fill="#4285f4" opacity="0.7">
+        <text x="200" y="200">
+            <animate attributeName="y" values="200;190;200" dur="8s" repeatCount="indefinite" />
+            Machine Learning
+        </text>
+        <text x="500" y="200">
+            <animate attributeName="y" values="200;210;200" dur="8s" repeatCount="indefinite" begin="1s" />
+            Deep Learning
+        </text>
+        <text x="180" y="400">
+            <animate attributeName="y" values="400;410;400" dur="8s" repeatCount="indefinite" begin="2s" />
+            Natural Language
+        </text>
+        <text x="500" y="400">
+            <animate attributeName="y" values="400;390;400" dur="8s" repeatCount="indefinite" begin="3s" />
+            Computer Vision
+        </text>
+        <text x="350" y="120">
+            <animate attributeName="y" values="120;110;120" dur="8s" repeatCount="indefinite" begin="4s" />
+            Neural Networks
+        </text>
+        <text x="350" y="480">
+            <animate attributeName="y" values="480;490;480" dur="8s" repeatCount="indefinite" begin="5s" />
+            Data Science
+        </text>
+    </g>
+</svg>

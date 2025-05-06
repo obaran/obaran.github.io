@@ -35,21 +35,24 @@
     </header>
 
     <section id="accueil" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1><span class="highlight">Onur Baran</span></h1>
-                <h2>Chef de Projet IA • Développement d'Outils IA • Formation</h2>
-                <p>Passionné par la transformation digitale et orienté résultats, je vous accompagne dans l'intégration de solutions IA innovantes et performantes. Basé à Paris et Grenoble, je propose mes services en freelance pour répondre à vos besoins spécifiques.</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Me contacter</a>
-                    <a href="#services" class="btn btn-secondary">Découvrir mes services</a>
-                </div>
+        <div class="hero-content">
+            <h1><span class="highlight">Onur Baran</span></h1>
+            <h2>Chef de Projet IA • Développement d'Outils IA • Formation</h2>
+            <p>Passionné par la transformation digitale et orienté résultats, je vous accompagne dans l'intégration de solutions IA innovantes et performantes. Basé à Paris et Grenoble, je propose mes services en freelance pour répondre à vos besoins spécifiques.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Me contacter</a>
+                <a href="#services" class="btn btn-secondary">Découvrir mes services</a>
             </div>
-            <div class="hero-image">
-                <div class="ai-animation">
-                    <!-- Animation JS sera ajoutée ici -->
-                </div>
+        </div>
+        
+        <!-- Animation 3D sophistiquée -->
+        <div class="hero-animation">
+            <div class="brain-container">
+                <object type="image/svg+xml" data="img/ai-brain-network.svg" class="brain-svg">
+                    Cerveau IA
+                </object>
             </div>
+            <div id="three-animation"></div>
         </div>
     </section>
 
@@ -207,35 +210,43 @@
                         <li><i class="fas fa-check"></i> Mise en place d'exercices concrets et de workshops</li>
                     </ul>
                 </div>
-                <div class="skills-progress">
-                    <div class="skill">
-                        <div class="skill-name">Gestion de Projet IA</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="95"></div>
+                <div class="skills-container">
+                    <div class="floating-skills">
+                        <div class="floating-skill" data-speed="2">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Gestion de Projet IA</span>
                         </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">Développement de Chatbots</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="90"></div>
+                        <div class="floating-skill" data-speed="1.5">
+                            <i class="fas fa-robot"></i>
+                            <span>Développement de Chatbots</span>
                         </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">Azure AI & OpenAI</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="85"></div>
+                        <div class="floating-skill" data-speed="2.2">
+                            <i class="fas fa-cloud"></i>
+                            <span>Azure AI & OpenAI</span>
                         </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">Formation & Pédagogie</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="90"></div>
+                        <div class="floating-skill" data-speed="1.8">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Formation & Pédagogie</span>
                         </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-name">Développement Web</div>
-                        <div class="skill-bar">
-                            <div class="skill-per" per="80"></div>
+                        <div class="floating-skill" data-speed="2.5">
+                            <i class="fas fa-code"></i>
+                            <span>Développement Web</span>
+                        </div>
+                        <div class="floating-skill" data-speed="1.7">
+                            <i class="fas fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="floating-skill" data-speed="2.3">
+                            <i class="fas fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="floating-skill" data-speed="1.9">
+                            <i class="fas fa-database"></i>
+                            <span>RAG</span>
+                        </div>
+                        <div class="floating-skill" data-speed="2.1">
+                            <i class="fas fa-keyboard"></i>
+                            <span>Prompt Engineering</span>
                         </div>
                     </div>
                 </div>
@@ -300,11 +311,15 @@
                 <h2>Prendre <span class="highlight">Rendez-vous</span></h2>
                 <p>Réservez un créneau pour discuter de votre projet</p>
             </div>
-            <div class="calendly-container" style="min-height: 650px;">
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/o-baranonur" style="min-width:320px;height:630px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
+            <div class="calendly-wrapper">
+                <div class="calendly-decoration left"></div>
+                <div class="calendly-container">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/o-baranonur" style="min-width:320px;height:630px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
+                </div>
+                <div class="calendly-decoration right"></div>
             </div>
         </div>
     </section>
@@ -330,30 +345,47 @@
     <div id="modal-1" class="portfolio-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2>Chatbots pour l'éducation - EMLYON Business School</h2>
+            <h2>Studybot - Chatbots pour l'éducation (EMLYON Business School)</h2>
             <div class="modal-info">
                 <div class="modal-img">
                     <img src="img/Studybot.png" alt="Chatbots pour EMLYON Business School">
                 </div>
                 <div class="modal-details">
                     <h3>Contexte</h3>
-                    <p>Création et déploiement de chatbots (Flowise, AzureOpenAI) utilisés par plus de 800 étudiants et collaborateurs de l'EMLYON Business School.</p>
+                    <p>Création et déploiement de chatbots éducatifs utilisés par plus de 800 étudiants et collaborateurs de l'EMLYON Business School, avec une attention particulière portée à la conformité RGPD et à la scalabilité.</p>
                     
                     <h3>Défis</h3>
                     <ul>
                         <li>Développement d'assistants IA adaptés au contexte éducatif</li>
                         <li>Intégration avec les systèmes existants de l'école</li>
-                        <li>Formation des utilisateurs à l'utilisation optimale des chatbots</li>
+                        <li>Conformité RGPD stricte pour les données des étudiants</li>
+                        <li>Mise en place d'une infrastructure évolutive pour supporter des pics d'utilisation</li>
                     </ul>
                     
-                    <h3>Solution</h3>
-                    <p>Mise en place de chatbots intelligents basés sur Azure OpenAI, personnalisés pour répondre aux besoins spécifiques des étudiants et du personnel administratif.</p>
+                    <h3>Solution technique</h3>
+                    <ul>
+                        <li>Déploiement sur Azure Kubernetes Service pour une haute disponibilité et scalabilité</li>
+                        <li>Intégration d'Azure OpenAI avec des appels API conformes RGPD</li>
+                        <li>Mise en place d'un système de journalisation sécurisé pour les interactions</li>
+                        <li>Architecture microservices pour faciliter les mises à jour et la maintenance</li>
+                        <li>Système d'authentification sécurisé avec Azure AD</li>
+                    </ul>
+                    
+                    <h3>Aspects RGPD</h3>
+                    <ul>
+                        <li>Anonymisation des données personnelles dans les requêtes API</li>
+                        <li>Mise en place de politiques de rétention des données</li>
+                        <li>Système de consentement explicite pour les utilisateurs</li>
+                        <li>Documentation complète des traitements de données</li>
+                    </ul>
                     
                     <h3>Résultats</h3>
                     <ul>
                         <li>Adoption par plus de 800 utilisateurs</li>
                         <li>Amélioration de l'accès à l'information pour les étudiants</li>
                         <li>Réduction de la charge de travail pour le personnel administratif</li>
+                        <li>Conformité totale avec les exigences RGPD</li>
+                        <li>Infrastructure robuste capable de gérer des pics d'utilisation (jusqu'à 800 utilisateurs simultanés)</li>
                     </ul>
                 </div>
             </div>
@@ -363,30 +395,47 @@
     <div id="modal-2" class="portfolio-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2>Solutions IA personnalisées</h2>
+            <h2>SynthéZ - Solution de transformation de documents pour EMLYON Business School</h2>
             <div class="modal-info">
                 <div class="modal-img">
-                    <img src="img/SyntheZ.png" alt="Solutions IA personnalisées">
+                    <img src="img/SyntheZ.png" alt="SynthéZ - Solution de transformation de documents">
                 </div>
                 <div class="modal-details">
                     <h3>Contexte</h3>
-                    <p>Intégration de solutions IA personnalisées pour EMLYON Business School, incluant des outils de synthèse de cours et d'automatisation des processus.</p>
+                    <p>Développement d'une solution innovante de transformation de documents pour EMLYON Business School, permettant de convertir des PDF longs en versions synthétiques, structurées et adaptées aux besoins pédagogiques.</p>
                     
                     <h3>Défis</h3>
                     <ul>
-                        <li>Création d'outils adaptés aux besoins spécifiques des utilisateurs</li>
-                        <li>Intégration avec les systèmes d'information existants</li>
-                        <li>Optimisation des performances pour une utilisation à grande échelle</li>
+                        <li>Traitement intelligent de documents complexes et volumineux</li>
+                        <li>Analyse et synthèse de documents pédagogiques</li>
+                        <li>Création d'une interface utilisateur intuitive et efficace</li>
+                        <li>Génération de contenu structuré et personnalisable</li>
                     </ul>
                     
                     <h3>Solution</h3>
-                    <p>Développement de solutions sur mesure utilisant Azure AI Foundry et déploiement sur Azure Kubernetes et Azure Web Service.</p>
+                    <p>Développement d'une application web complète utilisant :</p>
+                    <ul>
+                        <li>Azure OpenAI (GPT-4o) pour l'analyse et la génération de contenu structuré</li>
+                        <li>DALL-E pour la création d'images de couverture personnalisées</li>
+                        <li>React avec TypeScript pour le frontend (Tailwind CSS, shadcn/ui)</li>
+                        <li>Azure App Service pour le backend (Node.js)</li>
+                        <li>Azure Static Web Apps pour l'hébergement du frontend</li>
+                    </ul>
+                    
+                    <h3>Aspects techniques notables</h3>
+                    <ul>
+                        <li>Mise en place d'un système de proxy pour sécuriser les appels API</li>
+                        <li>Configuration multi-environnements (local, dev, production)</li>
+                        <li>Interface utilisateur intuitive avec glisser-déposer pour la réorganisation des sections</li>
+                        <li>Génération automatique de PDF structurés avec mise en page professionnelle</li>
+                    </ul>
                     
                     <h3>Résultats</h3>
                     <ul>
-                        <li>Automatisation efficace des processus administratifs</li>
-                        <li>Amélioration de l'expérience d'apprentissage des étudiants</li>
-                        <li>Gain de temps significatif pour les équipes pédagogiques</li>
+                        <li>Gain de temps significatif pour les équipes pédagogiques dans la préparation des supports de cours</li>
+                        <li>Amélioration de la qualité des synthèses grâce à une structure cohérente et personnalisable</li>
+                        <li>Flexibilité d'utilisation avec support pour les documents PDF et les scripts vidéo</li>
+                        <li>Expérience d'apprentissage améliorée pour les étudiants avec des documents synthétiques adaptés à leurs besoins</li>
                     </ul>
                 </div>
             </div>
@@ -462,32 +511,40 @@
     <div id="modal-5" class="portfolio-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2>QuizForge - Outil de création de quiz personnalisés</h2>
+            <h2>QuizForge - Outil de génération automatique de questionnaires</h2>
             <div class="modal-info">
                 <div class="modal-img">
-                    <img src="img/quizforge.png" alt="QuizForge pour Bioforce">
+                    <img src="img/quizforge.png" alt="QuizForge - Outil de génération de quiz">
                 </div>
                 <div class="modal-details">
                     <h3>Contexte</h3>
-                    <p>Développement d'un outil de création de quiz personnalisés pour l'association humanitaire Bioforce, permettant de former efficacement leurs équipes sur le terrain.</p>
+                    <p>Développement d'un outil de génération automatique de questionnaires à partir de documents pédagogiques pour les formateurs et enseignants, permettant de créer rapidement des évaluations de qualité basées sur le contenu de leurs supports de cours.</p>
                     
                     <h3>Défis</h3>
                     <ul>
-                        <li>Création d'un outil accessible même avec une connexion internet limitée</li>
-                        <li>Interface intuitive pour des utilisateurs non-techniques</li>
-                        <li>Personnalisation avancée des quiz selon les besoins spécifiques de formation</li>
-                        <li>Analyse des résultats pour améliorer les programmes de formation</li>
+                        <li>Extraction efficace du contenu de différents formats de documents (PDF, DOCX, ZIP)</li>
+                        <li>Génération de questions pertinentes et variées grâce à l'IA</li>
+                        <li>Standardisation des questions selon des référentiels pédagogiques</li>
+                        <li>Export dans des formats compatibles avec les plateformes d'apprentissage (GIFT, Moodle XML)</li>
                     </ul>
                     
                     <h3>Solution</h3>
-                    <p>Développement d'une application web progressive (PWA) avec fonctionnalités hors ligne, intégrant des technologies d'IA pour personnaliser les questions en fonction des réponses précédentes.</p>
+                    <p>Développement d'une application web full-stack utilisant Node.js/Express pour le backend et React pour le frontend, intégrant Azure OpenAI pour l'analyse de contenu et la génération de questions personnalisées.</p>
+                    
+                    <h3>Caractéristiques techniques</h3>
+                    <ul>
+                        <li>Backend en Node.js avec Express et SQLite pour le stockage</li>
+                        <li>Intégration avec Azure OpenAI (GPT-4o) pour la génération intelligente de questions</li>
+                        <li>Tests automatisés avec Jest (couverture de 27.58%)</li>
+                        <li>Architecture modulaire avec séparation des services (parsing, IA, export)</li>
+                    </ul>
                     
                     <h3>Résultats</h3>
                     <ul>
-                        <li>Amélioration de l'efficacité des formations de 40%</li>
-                        <li>Utilisation par plus de 200 formateurs dans 15 pays</li>
-                        <li>Adaptation dynamique du contenu selon les besoins spécifiques des équipes</li>
-                        <li>Réduction significative du temps de préparation des formations</li>
+                        <li>Réduction significative du temps de préparation des évaluations (de plusieurs heures à quelques minutes)</li>
+                        <li>Génération de questions de différents niveaux de difficulté et formats</li>
+                        <li>Possibilité d'aligner les questions sur des référentiels pédagogiques spécifiques</li>
+                        <li>Export dans des formats standards compatibles avec les principales plateformes d'apprentissage</li>
                     </ul>
                 </div>
             </div>
@@ -532,6 +589,9 @@
     <script src="js/main.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/three-animation.js"></script>
+    <script src="js/glitch-effect.js"></script>
+    <script src="js/floating-skills.js"></script>
     <script>
         // Gestion du formulaire de contact avec Formspree
         const contactForm = document.getElementById('contactForm');

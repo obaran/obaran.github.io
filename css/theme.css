@@ -345,14 +345,650 @@ body.dark-theme .btn-primary:hover {
 .contact-item:nth-child(3) { animation-delay: 0.4s; }
 
 /* Calendly Container */
+.calendly-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
 .calendly-container {
     background-color: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px var(--shadow-color);
+    box-shadow: 0 10px 30px rgba(26, 115, 232, 0.15);
     transition: all 0.3s ease;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(66, 133, 244, 0.2);
 }
 
 .calendly-container:hover {
-    box-shadow: 0 8px 30px var(--shadow-color);
+    box-shadow: 0 15px 40px rgba(26, 115, 232, 0.25);
+    transform: translateY(-5px);
+}
+
+.calendly-decoration {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.calendly-decoration.left {
+    background: radial-gradient(circle, rgba(26, 115, 232, 0.1) 0%, rgba(26, 115, 232, 0) 70%);
+    top: -50px;
+    left: -100px;
+    animation: pulse 6s ease-in-out infinite;
+}
+
+.calendly-decoration.right {
+    background: radial-gradient(circle, rgba(66, 133, 244, 0.1) 0%, rgba(66, 133, 244, 0) 70%);
+    bottom: -50px;
+    right: -100px;
+    animation: pulse 6s ease-in-out infinite 3s;
+}
+
+/* Ajout d'un effet de scan sur le widget Calendly */
+.calendly-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(66, 133, 244, 0.05) 50%, 
+        transparent 100%);
+    z-index: 3;
+    animation: scan 8s linear infinite;
+    pointer-events: none;
+}
+
+/* Ajout d'un effet de grille en arrière-plan */
+.calendly-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, rgba(26, 115, 232, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(26, 115, 232, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Ajustements pour les écrans plus petits */
+@media (max-width: 768px) {
+    .calendly-wrapper {
+        padding: 10px;
+    }
+    
+    .calendly-decoration {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .calendly-decoration.left {
+        left: -50px;
+    }
+    
+    .calendly-decoration.right {
+        right: -50px;
+    }
+}
+
+/* Hero Section with Data Network */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    padding: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 50%;
+    padding: 0 5%;
+    margin-left: 5%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    animation: fadeIn 1s ease 0.4s forwards;
+    opacity: 0;
+}
+
+.hero .cta-buttons {
+    animation: fadeIn 1s ease 0.6s forwards;
+    opacity: 0;
+}
+
+/* Animation 3D sophistiquée */
+.hero-animation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.brain-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease 0.8s forwards, float 10s ease-in-out infinite;
+    opacity: 0;
+}
+
+.brain-svg {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    filter: drop-shadow(0 0 15px rgba(66, 133, 244, 0.3));
+}
+
+#three-animation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/* Éléments flottants */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.floating-element {
+    position: absolute;
+    background: rgba(26, 115, 232, 0.1);
+    border: 1px solid rgba(66, 133, 244, 0.3);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.2);
+    opacity: 0;
+    animation: fadeInFloat 1s forwards, float 8s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.floating-element:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 1s, 1s;
+}
+
+.floating-element:nth-child(2) {
+    top: 30%;
+    left: 5%;
+    animation-delay: 1.2s, 1.2s;
+}
+
+.floating-element:nth-child(3) {
+    top: 50%;
+    left: 15%;
+    animation-delay: 1.4s, 1.4s;
+}
+
+.floating-element:nth-child(4) {
+    top: 70%;
+    left: 10%;
+    animation-delay: 1.6s, 1.6s;
+}
+
+.floating-element:nth-child(5) {
+    top: 40%;
+    left: 0;
+    animation-delay: 1.8s, 1.8s;
+}
+
+.floating-element:nth-child(6) {
+    top: 60%;
+    left: 5%;
+    animation-delay: 2s, 2s;
+}
+
+/* Animations */
+@keyframes fadeInFloat {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 0.9; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Effet de lueur */
+.glow-effect {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(66, 133, 244, 0.2) 0%, rgba(26, 115, 232, 0) 70%);
+    z-index: 2;
+    animation: pulse 5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+/* Effet de glitch */
+.glitch-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-text {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-before,
+.glitch-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.glitch-before {
+    left: -2px;
+    text-shadow: 2px 0 #1a73e8;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim-1 5s infinite linear alternate-reverse;
+}
+
+.glitch-after {
+    left: 2px;
+    text-shadow: -2px 0 #4285f4;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim-2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% {
+        clip: rect(26px, 9999px, 29px, 0);
+    }
+    10% {
+        clip: rect(46px, 9999px, 91px, 0);
+    }
+    20% {
+        clip: rect(54px, 9999px, 30px, 0);
+    }
+    30% {
+        clip: rect(86px, 9999px, 73px, 0);
+    }
+    40% {
+        clip: rect(6px, 9999px, 92px, 0);
+    }
+    50% {
+        clip: rect(53px, 9999px, 5px, 0);
+    }
+    60% {
+        clip: rect(89px, 9999px, 14px, 0);
+    }
+    70% {
+        clip: rect(65px, 9999px, 48px, 0);
+    }
+    80% {
+        clip: rect(51px, 9999px, 77px, 0);
+    }
+    90% {
+        clip: rect(84px, 9999px, 91px, 0);
+    }
+    100% {
+        clip: rect(46px, 9999px, 32px, 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        clip: rect(18px, 9999px, 93px, 0);
+    }
+    10% {
+        clip: rect(76px, 9999px, 35px, 0);
+    }
+    20% {
+        clip: rect(25px, 9999px, 68px, 0);
+    }
+    30% {
+        clip: rect(44px, 9999px, 96px, 0);
+    }
+    40% {
+        clip: rect(11px, 9999px, 17px, 0);
+    }
+    50% {
+        clip: rect(59px, 9999px, 44px, 0);
+    }
+    60% {
+        clip: rect(98px, 9999px, 28px, 0);
+    }
+    70% {
+        clip: rect(39px, 9999px, 24px, 0);
+    }
+    80% {
+        clip: rect(23px, 9999px, 65px, 0);
+    }
+    90% {
+        clip: rect(71px, 9999px, 40px, 0);
+    }
+    100% {
+        clip: rect(33px, 9999px, 97px, 0);
+    }
+}
+
+/* Effet holographique */
+.holo-particle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(66, 133, 244, 0.7);
+    pointer-events: none;
+}
+
+/* Effet de surbrillance au survol */
+.floating-element:hover {
+    background: rgba(26, 115, 232, 0.2);
+    box-shadow: 0 0 20px rgba(66, 133, 244, 0.5);
+    transform: translateY(-5px) scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Effet d'interface futuriste */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, rgba(26, 115, 232, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(26, 115, 232, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+}
+
+/* Effet de scan */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(66, 133, 244, 0.05) 50%, 
+        transparent 100%);
+    z-index: 2;
+    animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Effet de texte lumineux */
+.highlight {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%);
+    animation: highlight-pulse 3s ease-in-out infinite;
+}
+
+@keyframes highlight-pulse {
+    0% {
+        opacity: 0.5;
+        transform: scaleX(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scaleX(0.8);
+    }
+}
+
+/* Compétences flottantes dans la section expertise */
+.skills-container {
+    position: relative;
+    width: 50%;
+    height: 400px;
+}
+
+.floating-skills {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-skill {
+    position: absolute;
+    background: rgba(26, 115, 232, 0.1);
+    border: 1px solid rgba(66, 133, 244, 0.3);
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: float 8s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.floating-skill i {
+    font-size: 16px;
+}
+
+.floating-skill:hover {
+    background: rgba(26, 115, 232, 0.2);
+    box-shadow: 0 0 20px rgba(66, 133, 244, 0.5);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.floating-skill:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.floating-skill:nth-child(2) {
+    top: 25%;
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.floating-skill:nth-child(3) {
+    top: 40%;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.floating-skill:nth-child(4) {
+    top: 55%;
+    left: 60%;
+    animation-delay: 1.5s;
+}
+
+.floating-skill:nth-child(5) {
+    top: 70%;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.floating-skill:nth-child(6) {
+    top: 15%;
+    left: 70%;
+    animation-delay: 2.5s;
+}
+
+.floating-skill:nth-child(7) {
+    top: 45%;
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.floating-skill:nth-child(8) {
+    top: 65%;
+    left: 10%;
+    animation-delay: 3.5s;
+}
+
+.floating-skill:nth-child(9) {
+    top: 80%;
+    left: 50%;
+    animation-delay: 4s;
+}
+
+/* Modification de la mise en page de la section expertise */
+.expertise-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.expertise-text {
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .expertise-content {
+        flex-direction: column;
+    }
+    
+    .expertise-text,
+    .skills-container {
+        width: 100%;
+    }
+    
+    .skills-container {
+        height: 500px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-skill {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    
+    .hero-content {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .hero-animation {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        margin-top: 50px;
+    }
+    
+    .floating-element {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
 }
