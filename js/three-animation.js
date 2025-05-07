@@ -250,10 +250,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             // Animation subtile des particules
-            const positions = particleGeometry.attributes.position.array;
+            const particlePositions = particleGeometry.attributes.position.array;
             for (let i = 0; i < particleCount; i++) {
                 const i3 = i * 3;
-                positions[i3 + 1] += Math.sin(frame * 0.01 + i * 0.1) * 0.01;
+                particlePositions[i3 + 1] += Math.sin(frame * 0.01 + i * 0.1) * 0.01;
             }
             particleGeometry.attributes.position.needsUpdate = true;
             
