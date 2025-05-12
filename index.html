@@ -281,20 +281,24 @@
                     <!-- L'animation de contact sera injectée ici par JavaScript -->
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/xkgrrlep" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xkgrrlep" method="POST" novalidate>
                         <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
                         <input type="hidden" name="_next" value="https://obaran.github.io/thanks.html">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Votre nom" required>
+                            <input type="text" name="name" placeholder="Votre nom *" required>
+                            <div class="error-message">Veuillez entrer votre nom</div>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Votre email" required>
+                            <input type="email" name="email" placeholder="Votre email *" required>
+                            <div class="error-message">Veuillez entrer une adresse email valide</div>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Sujet" required>
+                            <input type="text" name="subject" placeholder="Sujet *" required>
+                            <div class="error-message">Veuillez entrer un sujet</div>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Votre message" required></textarea>
+                            <textarea name="message" placeholder="Votre message *" required></textarea>
+                            <div class="error-message">Veuillez entrer votre message</div>
                         </div>
                         <button type="submit" class="btn-primary">Envoyer</button>
                     </form>
@@ -591,6 +595,8 @@
     <script src="js/glitch-effect.js"></script>
     <script src="js/floating-skills.js"></script>
     <script src="js/contact-animation.js"></script>
+    <script src="js/image-zoom.js"></script>
+    <script src="js/form-validation.js"></script>
     <script>
         // Gestion du formulaire de contact avec Formspree
         const contactForm = document.getElementById('contactForm');
