@@ -912,3 +912,8 @@ footer {
         width: 80%;
     }
 }
+.code-lines::after {
+    pointer-events: none !important;
+  }
+  
+  
