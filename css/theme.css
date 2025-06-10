@@ -1207,6 +1207,7 @@ body.dark-theme .form-group textarea::placeholder {
         transparent 100%);
     z-index: 2;
     animation: scan 8s linear infinite;
+    pointer-events: none;
 }
 
 @keyframes scan {
