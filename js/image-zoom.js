@@ -19,14 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Fonction pour initialiser les images cliquables
     function initializeZoomableImages() {
-        const modalImages = document.querySelectorAll('.modal-img img');
+        const modalImages = document.querySelectorAll('.modal-img img, .gallery-image');
         
         modalImages.forEach(img => {
             // Vérifier si l'image a déjà été initialisée
             if (!img.dataset.zoomInitialized) {
                 img.dataset.zoomInitialized = 'true';
-                img.style.cursor = 'pointer';
+                img.style.cursor = 'zoom-in';
                 img.addEventListener('click', function(e) {
+                    // Ne pas zoomer si on clique sur les boutons de navigation
+                    if (e.target.closest('.gallery-nav')) {
+                        return;
+                    }
                     e.preventDefault();
                     e.stopPropagation();
                     

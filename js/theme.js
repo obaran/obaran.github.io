@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Vérifier si un thème est déjà enregistré
         const savedTheme = localStorage.getItem('theme');
         
-        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        // Par défaut, activer le dark mode (sauf si l'utilisateur a explicitement choisi le light mode)
+        if (savedTheme === 'dark' || !savedTheme) {
             document.body.classList.add('dark-theme');
             themeToggle.classList.add('dark');
         }

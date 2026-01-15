@@ -311,7 +311,7 @@ h3 {
 
 body.dark-theme h3 {
     color: var(--primary-light);
-    text-shadow: 0 0 5px rgba(66, 133, 244, 0.3);
+    text-shadow: 0 0 2px rgba(66, 133, 244, 0.2);
 }
 
 .modal-details h3 {
@@ -765,20 +765,24 @@ body.dark-theme .form-group textarea::placeholder {
 /* Hero Section with Data Network */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 120vh;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
     background-color: var(--bg-color);
-    padding: 0;
+    padding: 150px 0 100px;
 }
 
 .hero-content {
     position: relative;
     z-index: 10;
-    width: 50%;
+    width: 100%;
+    max-width: 1100px;
     padding: 0 5%;
-    margin-left: 5%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero h1 {
@@ -796,8 +800,9 @@ body.dark-theme .form-group textarea::placeholder {
 
 .hero p {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
+    margin: 0 auto 2rem;
+    max-width: 850px;
+    line-height: 1.8;
     animation: fadeIn 1s ease 0.4s forwards;
     opacity: 0;
 }
@@ -805,23 +810,28 @@ body.dark-theme .form-group textarea::placeholder {
 .hero .cta-buttons {
     animation: fadeIn 1s ease 0.6s forwards;
     opacity: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Animation 3D sophistiquée */
 .hero-animation {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    z-index: 5;
-    overflow: hidden;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    height: 600px;
+    z-index: 1;
+    overflow: visible;
+    pointer-events: none;
 }
 
 .brain-container {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -829,23 +839,24 @@ body.dark-theme .form-group textarea::placeholder {
     align-items: center;
     animation: fadeIn 1s ease 0.8s forwards, float 10s ease-in-out infinite;
     opacity: 0;
+    z-index: 2;
 }
 
 .brain-svg {
     width: 100%;
     height: 100%;
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 700px;
+    max-height: 700px;
     filter: drop-shadow(0 0 15px rgba(66, 133, 244, 0.3));
 }
 
-#three-animation {
+.hero-animation #three-animation {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 4;
+    z-index: 1;
 }
 
 /* Éléments flottants */
@@ -1222,7 +1233,7 @@ body.dark-theme .form-group textarea::placeholder {
 /* Effet de texte lumineux */
 .highlight {
     color: var(--primary-color);
-    text-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+    text-shadow: 0 0 2px rgba(66, 133, 244, 0.3);
     position: relative;
     display: inline-block;
 }
@@ -1260,7 +1271,7 @@ body.dark-theme .form-group textarea::placeholder {
 .skills-container {
     position: relative;
     width: 50%;
-    height: 400px;
+    height: 500px;
 }
 
 .floating-skills {
@@ -1354,7 +1365,8 @@ body.dark-theme .form-group textarea::placeholder {
 /* Modification de la mise en page de la section expertise */
 .expertise-content {
     display: flex;
-    gap: 30px;
+    flex-direction: row;
+    gap: 50px;
     align-items: flex-start;
 }
 
@@ -1388,8 +1400,8 @@ body.dark-theme .form-group textarea::placeholder {
 /* Responsive */
 @media (max-width: 992px) {
     .hero {
-        flex-direction: column;
-        padding-top: 100px;
+        padding: 130px 0 80px;
+        min-height: auto;
     }
     
     .hero-content {
@@ -1401,9 +1413,17 @@ body.dark-theme .form-group textarea::placeholder {
     
     .hero-animation {
         position: relative;
-        width: 100%;
-        height: 50vh;
-        margin-top: 50px;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        height: 400px;
+        margin-top: 30px;
+    }
+    
+    .brain-svg {
+        max-width: 400px;
+        max-height: 400px;
     }
     
     .floating-element {

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1024" height="600" viewBox="0 0 1024 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient pour le fond (optionnel) -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#001a33;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002847;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient pour les nœuds du réseau -->
+    <radialGradient id="nodeGradient">
+      <stop offset="0%" style="stop-color:#c0f0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5dd9ff;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gradient pour le cercle extérieur -->
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5dd9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Effet de lueur -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Effet de lueur forte pour le texte -->
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fond (optionnel) -->
+  <rect width="1024" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Groupe principal du logo -->
+  <g id="hybrid-logo">
+    
+    <!-- Icône du réseau neural (combinaison créativité + structure) -->
+    <g id="network-icon" transform="translate(200, 300)">
+      
+      <!-- Cercle extérieur (stabilité) -->
+      <circle cx="0" cy="0" r="110" fill="none" stroke="url(#circleGradient)" stroke-width="6" opacity="0.9" filter="url(#glow)"/>
+      
+      <!-- Cercle intermédiaire animé (créativité) -->
+      <circle cx="0" cy="0" r="95" fill="none" stroke="#5dd9ff" stroke-width="2" opacity="0.5">
+        <animate attributeName="r" values="95;100;95" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.5;0.3;0.5" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Connexions du réseau (créativité organique) -->
+      <g id="connections" stroke="#5dd9ff" stroke-width="3" stroke-linecap="round" opacity="0.7">
+        <!-- Connexions principales -->
+        <line x1="-45" y1="-45" x2="0" y2="0">
+          <animate attributeName="opacity" values="0.7;0.9;0.7" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line x1="45" y1="-45" x2="0" y2="0">
+          <animate attributeName="opacity" values="0.7;0.9;0.7" dur="3s" repeatCount="indefinite" begin="0.5s" />
+        </line>
+        <line x1="45" y1="45" x2="0" y2="0">
+          <animate attributeName="opacity" values="0.7;0.9;0.7" dur="3s" repeatCount="indefinite" begin="1s" />
+        </line>
+        <line x1="-45" y1="45" x2="0" y2="0">
+          <animate attributeName="opacity" values="0.7;0.9;0.7" dur="3s" repeatCount="indefinite" begin="1.5s" />
+        </line>
+        
+        <!-- Connexions secondaires -->
+        <line x1="-45" y1="-45" x2="45" y2="-45" opacity="0.5"/>
+        <line x1="45" y1="-45" x2="45" y2="45" opacity="0.5"/>
+        <line x1="45" y1="45" x2="-45" y2="45" opacity="0.5"/>
+        <line x1="-45" y1="45" x2="-45" y2="-45" opacity="0.5"/>
+        
+        <!-- Connexions diagonales -->
+        <line x1="-45" y1="-45" x2="45" y2="45" opacity="0.4"/>
+        <line x1="45" y1="-45" x2="-45" y2="45" opacity="0.4"/>
+        
+        <!-- Connexions vers l'extérieur (structure) -->
+        <line x1="0" y1="-70" x2="-45" y2="-45" opacity="0.6"/>
+        <line x1="0" y1="-70" x2="45" y2="-45" opacity="0.6"/>
+        <line x1="70" y1="0" x2="45" y2="-45" opacity="0.6"/>
+        <line x1="70" y1="0" x2="45" y2="45" opacity="0.6"/>
+        <line x1="0" y1="70" x2="45" y2="45" opacity="0.6"/>
+        <line x1="0" y1="70" x2="-45" y2="45" opacity="0.6"/>
+        <line x1="-70" y1="0" x2="-45" y2="45" opacity="0.6"/>
+        <line x1="-70" y1="0" x2="-45" y2="-45" opacity="0.6"/>
+      </g>
+      
+      <!-- Nœuds du réseau (combinaison créativité + structure) -->
+      <g id="nodes">
+        <!-- Nœud central (créativité) -->
+        <circle cx="0" cy="0" r="10" fill="url(#nodeGradient)" filter="url(#glow)">
+          <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- Nœuds intérieurs (structure + créativité) -->
+        <circle cx="-45" cy="-45" r="8" fill="url(#nodeGradient)" opacity="0.95" filter="url(#glow)">
+          <animate attributeName="r" values="8;9;8" dur="3s" repeatCount="indefinite" begin="0.5s" />
+        </circle>
+        <circle cx="45" cy="-45" r="8" fill="url(#nodeGradient)" opacity="0.95" filter="url(#glow)">
+          <animate attributeName="r" values="8;9;8" dur="3s" repeatCount="indefinite" begin="1s" />
+        </circle>
+        <circle cx="45" cy="45" r="8" fill="url(#nodeGradient)" opacity="0.95" filter="url(#glow)">
+          <animate attributeName="r" values="8;9;8" dur="3s" repeatCount="indefinite" begin="1.5s" />
+        </circle>
+        <circle cx="-45" cy="45" r="8" fill="url(#nodeGradient)" opacity="0.95" filter="url(#glow)">
+          <animate attributeName="r" values="8;9;8" dur="3s" repeatCount="indefinite" begin="2s" />
+        </circle>
+        
+        <!-- Nœuds extérieurs (stabilité) -->
+        <circle cx="0" cy="-70" r="7" fill="url(#nodeGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="70" cy="0" r="7" fill="url(#nodeGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="0" cy="70" r="7" fill="url(#nodeGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="-70" cy="0" r="7" fill="url(#nodeGradient)" opacity="0.9" filter="url(#glow)"/>
+        
+        <!-- Nœuds diagonaux extérieurs (créativité) -->
+        <circle cx="-55" cy="-55" r="5" fill="url(#nodeGradient)" opacity="0.85" filter="url(#glow)"/>
+        <circle cx="55" cy="-55" r="5" fill="url(#nodeGradient)" opacity="0.85" filter="url(#glow)"/>
+        <circle cx="55" cy="55" r="5" fill="url(#nodeGradient)" opacity="0.85" filter="url(#glow)"/>
+        <circle cx="-55" cy="55" r="5" fill="url(#nodeGradient)" opacity="0.85" filter="url(#glow)"/>
+      </g>
+      
+      <!-- Particules flottantes (créativité) -->
+      <g id="particles">
+        <circle cx="80" cy="-30" r="2" fill="#5dd9ff" opacity="0.6">
+          <animate attributeName="cy" values="-30;-35;-30" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-80" cy="30" r="2" fill="#5dd9ff" opacity="0.6">
+          <animate attributeName="cy" values="30;35;30" dur="4.5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4.5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="30" cy="80" r="2" fill="#5dd9ff" opacity="0.6">
+          <animate attributeName="cx" values="30;35;30" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.6;0.3;0.6" dur="5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="-30" cy="-80" r="2" fill="#5dd9ff" opacity="0.6">
+          <animate attributeName="cx" values="-30;-35;-30" dur="4.2s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4.2s" repeatCount="indefinite" />
+        </circle>
+      </g>
+    </g>
+    
+    <!-- Texte AIGen Solutions (stabilité + modernité) -->
+    <g id="logo-text" transform="translate(350, 300)">
+      <!-- AIGen (gris élégant) -->
+      <text x="0" y="30" font-family="'Poppins', 'Arial', sans-serif" font-size="95" font-weight="700" fill="#8fa9ba" letter-spacing="10" filter="url(#textGlow)">
+        AIGen
+      </text>
+      
+      <!-- Solutions (cyan lumineux) -->
+      <text x="380" y="30" font-family="'Poppins', 'Arial', sans-serif" font-size="95" font-weight="700" fill="#00d4ff" letter-spacing="10" filter="url(#textGlow)">
+        Solutions
+        <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite" />
+      </text>
+      
+      <!-- Ligne de séparation subtile (stabilité) -->
+      <line x1="0" y1="50" x2="630" y2="50" stroke="#5dd9ff" stroke-width="2" opacity="0.4"/>
+      
+      <!-- Tagline (optionnel) -->
+      <text x="0" y="80" font-family="'Poppins', 'Arial', sans-serif" font-size="18" font-weight="400" fill="#8fa9ba" letter-spacing="3" opacity="0.8">
+        Creative Intelligence • Stable Solutions
+      </text>
+    </g>
+    
+  </g>
+</svg>

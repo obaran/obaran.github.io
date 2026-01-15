@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0080ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.1">
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#00d4ff" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#00d4ff" stroke-width="1"/>
+    <line x1="0" y1="600" x2="1200" y2="600" stroke="#00d4ff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="800" stroke="#00d4ff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="800" stroke="#00d4ff" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="800" stroke="#00d4ff" stroke-width="1"/>
+  </g>
+  
+  <!-- Source Image (Left) -->
+  <g id="sourceImage">
+    <rect x="100" y="200" width="400" height="400" rx="20" fill="#0f3460" stroke="url(#accentGrad)" stroke-width="3" filter="url(#glow)"/>
+    
+    <!-- Image icon -->
+    <rect x="150" y="250" width="300" height="200" rx="10" fill="#1a5490" opacity="0.5"/>
+    <circle cx="220" cy="310" r="20" fill="#00d4ff" opacity="0.7"/>
+    <polygon points="150,420 250,350 350,380 450,320 450,450 150,450" fill="#00d4ff" opacity="0.4"/>
+    
+    <!-- Text lines (original) -->
+    <rect x="170" y="480" width="250" height="15" rx="5" fill="#00d4ff" opacity="0.8"/>
+    <rect x="170" y="510" width="200" height="15" rx="5" fill="#00d4ff" opacity="0.6"/>
+    <rect x="170" y="540" width="230" height="15" rx="5" fill="#00d4ff" opacity="0.6"/>
+    
+    <!-- Label -->
+    <text x="300" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00d4ff" text-anchor="middle">
+      Image Originale
+    </text>
+  </g>
+  
+  <!-- Arrow with AI processing -->
+  <g id="aiProcess">
+    <!-- Arrow -->
+    <path d="M 520 400 L 650 400" stroke="url(#accentGrad)" stroke-width="4" fill="none" marker-end="url(#arrowhead)" filter="url(#glow)"/>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#00d4ff" />
+      </marker>
+    </defs>
+    
+    <!-- AI Brain Icon -->
+    <circle cx="585" cy="400" r="40" fill="#16213e" stroke="url(#accentGrad)" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="585" cy="390" r="8" fill="#00d4ff"/>
+    <circle cx="575" cy="405" r="6" fill="#00d4ff" opacity="0.7"/>
+    <circle cx="595" cy="405" r="6" fill="#00d4ff" opacity="0.7"/>
+    <line x1="575" y1="405" x2="585" y2="390" stroke="#00d4ff" stroke-width="2"/>
+    <line x1="595" y1="405" x2="585" y2="390" stroke="#00d4ff" stroke-width="2"/>
+    
+    <!-- AI label -->
+    <text x="585" y="470" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00d4ff" text-anchor="middle">
+      IA Translation
+    </text>
+  </g>
+  
+  <!-- Translated Image (Right) -->
+  <g id="translatedImage">
+    <rect x="700" y="200" width="400" height="400" rx="20" fill="#0f3460" stroke="url(#accentGrad)" stroke-width="3" filter="url(#glow)"/>
+    
+    <!-- Same image icon (design preserved) -->
+    <rect x="750" y="250" width="300" height="200" rx="10" fill="#1a5490" opacity="0.5"/>
+    <circle cx="820" cy="310" r="20" fill="#00d4ff" opacity="0.7"/>
+    <polygon points="750,420 850,350 950,380 1050,320 1050,450 750,450" fill="#00d4ff" opacity="0.4"/>
+    
+    <!-- Text lines (translated) -->
+    <rect x="770" y="480" width="250" height="15" rx="5" fill="#00ff88" opacity="0.8"/>
+    <rect x="770" y="510" width="200" height="15" rx="5" fill="#00ff88" opacity="0.6"/>
+    <rect x="770" y="540" width="230" height="15" rx="5" fill="#00ff88" opacity="0.6"/>
+    
+    <!-- Label -->
+    <text x="900" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00ff88" text-anchor="middle">
+      Image Traduite
+    </text>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#accentGrad)" text-anchor="middle" filter="url(#glow)">
+    MediaTrad
+  </text>
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="24" fill="#8fa9ba" text-anchor="middle">
+    Traduction de médias avec préservation du design
+  </text>
+  
+  <!-- Feature indicators -->
+  <g id="features">
+    <circle cx="300" cy="650" r="5" fill="#00d4ff"/>
+    <text x="320" y="655" font-family="Arial, sans-serif" font-size="16" fill="#8fa9ba">
+      Détection automatique du texte
+    </text>
+    
+    <circle cx="600" cy="650" r="5" fill="#00d4ff"/>
+    <text x="620" y="655" font-family="Arial, sans-serif" font-size="16" fill="#8fa9ba">
+      Préservation du style
+    </text>
+    
+    <circle cx="900" cy="650" r="5" fill="#00d4ff"/>
+    <text x="920" y="655" font-family="Arial, sans-serif" font-size="16" fill="#8fa9ba">
+      Traduction IA contextuelle
+    </text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="150" r="30" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.3">
+    <animate attributeName="r" values="30;35;30" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1050" cy="150" r="30" fill="none" stroke="#00ff88" stroke-width="2" opacity="0.3">
+    <animate attributeName="r" values="30;35;30" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+</svg>

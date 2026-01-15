@@ -63,6 +63,12 @@ img {
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
+    -webkit-text-stroke: 0.5px rgba(78, 84, 200, 0.15);
+    text-shadow: 
+        1px 1px 2px rgba(78, 84, 200, 0.1),
+        -1px -1px 2px rgba(78, 84, 200, 0.1),
+        1px -1px 2px rgba(78, 84, 200, 0.1),
+        -1px 1px 2px rgba(78, 84, 200, 0.1);
 }
 
 .section-header p {
@@ -73,6 +79,15 @@ img {
 
 .highlight {
     color: var(--primary-color);
+}
+
+/* Style spécifique pour le titre Services avec ombre dégradée */
+.title-with-shadow {
+    text-shadow: 
+        0 0 10px rgba(78, 84, 200, 0.4),
+        0 0 20px rgba(78, 84, 200, 0.3),
+        0 0 30px rgba(78, 84, 200, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 section {
@@ -574,10 +589,10 @@ nav {
 }
 
 .expertise-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 50px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .expertise-list {

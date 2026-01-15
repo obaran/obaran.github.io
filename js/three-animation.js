@@ -1,24 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Vérifier si la section hero existe
-    const heroSection = document.querySelector('#accueil');
-    if (!heroSection) return;
-    
-    // Créer le conteneur pour l'animation 3D
-    const container = document.createElement('div');
-    container.id = 'ai-animation-container';
-    container.style.cssText = 'position: absolute; top: 0; right: 0; width: 60%; height: 100%; z-index: 1;';
-    
-    // Ajouter le conteneur à la section hero
-    heroSection.style.position = 'relative';
-    heroSection.appendChild(container);
-    
-    // Assurer que le contenu est au-dessus de l'animation
-    const heroContent = heroSection.querySelector('.hero-content');
-    if (heroContent) {
-        heroContent.style.position = 'relative';
-        heroContent.style.zIndex = '2';
-        heroContent.style.maxWidth = '50%';
-    }
+    // Utiliser le conteneur three-animation existant
+    const container = document.querySelector('#three-animation');
+    if (!container) return;
     
     // Charger Three.js
     const loadThreeJS = () => {

@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Initialiser tous les effets
-    createGlitchEffect();
+    // createGlitchEffect(); // Désactivé - effet trop exagéré
     createMatrixEffect();
     createHolographicParticles();
     createCodeLines();

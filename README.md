@@ -35,18 +35,25 @@ Pour déployer ce site sur GitHub Pages, suivez ces étapes :
 
 GitHub Pages déploiera automatiquement votre site à l'adresse : `https://[votre-nom-utilisateur].github.io/[nom-du-depot]`
 
-## Personnalisation
+## 💼 Sections Principales
 
-Pour personnaliser ce site :
+1. **Hero** - Présentation impactante avec animation 3D
+2. **Solutions** - 6 services clés avec cartes interactives
+3. **Métriques** - KPIs et chiffres clés
+4. **Réalisations** - Portfolio de projets clients
+5. **Expertise** - Stack technique et méthodologie
+6. **Contact** - Formulaire et calendrier de rendez-vous
 
-- Modifiez le contenu dans `index.html`
-- Ajoutez vos propres images dans le dossier `img/`
-- Personnalisez les couleurs et styles dans `css/style.css`
-- Ajoutez vos propres projets dans la section portfolio
+## 🎯 Optimisations
 
-## Formulaire de contact
+- ✅ Dark mode par défaut (meilleur pour l'œil, plus stylé)
+- ✅ Floating skills repositionnés en dessous (mobile-friendly)
+- ✅ Effets glow et néon sur tous les éléments interactifs
+- ✅ Animations fluides avec GPU acceleration
+- ✅ Chargement optimisé des ressources
+- ✅ SEO optimisé avec meta tags appropriés
 
-Le formulaire de contact est actuellement configuré pour une démonstration. Pour le rendre fonctionnel, vous pouvez :
+## 📱 Responsive
 
 - Utiliser un service comme [Formspree](https://formspree.io/) (gratuit)
 - Configurer un backend simple pour traiter les soumissions de formulaire
